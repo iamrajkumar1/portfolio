@@ -5,30 +5,35 @@ const lines = [
   "> boot lexicon://rajkumar",
   "> load identity .............. ok",
   "> mount python / fastapi / llm",
-  "> hydrate production ......... giants.calendar LIVE",
-  "> hydrate agents ............. lexaio RAG",
+  "> hydrate production ......... LIVE",
   "> handshake ready",
 ];
 
 const log = document.getElementById("boot-log");
 const boot = document.getElementById("boot");
+const canvas = document.getElementById("webgl");
 let i = 0;
 
 function typeBoot() {
   if (i < lines.length) {
     log.textContent += lines[i] + "\n";
     i += 1;
-    setTimeout(typeBoot, 480);
+    setTimeout(typeBoot, 280);
   } else {
     setTimeout(() => {
+      boot.classList.remove("show");
       boot.classList.add("hide");
-      setTimeout(() => boot.remove(), 700);
-    }, 1400);
+      createScene(canvas);
+      canvas.classList.add("ready");
+      setTimeout(() => boot.remove(), 500);
+    }, 450);
   }
 }
 
-createScene(document.getElementById("webgl"));
-typeBoot();
+setTimeout(() => {
+  boot.classList.add("show");
+  setTimeout(typeBoot, 350);
+}, 500);
 
 const modal = document.getElementById("resume-modal");
 const closeBtn = document.getElementById("close-resume");
