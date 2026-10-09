@@ -5,6 +5,8 @@ const lines = [
   "> boot lexicon://rajkumar",
   "> load identity .............. ok",
   "> mount python / fastapi / llm",
+  "> hydrate production ......... giants.calendar LIVE",
+  "> hydrate agents ............. lexaio RAG",
   "> handshake ready",
 ];
 
@@ -16,12 +18,12 @@ function typeBoot() {
   if (i < lines.length) {
     log.textContent += lines[i] + "\n";
     i += 1;
-    setTimeout(typeBoot, 90);
+    setTimeout(typeBoot, 480);
   } else {
     setTimeout(() => {
       boot.classList.add("hide");
-      setTimeout(() => boot.remove(), 500);
-    }, 220);
+      setTimeout(() => boot.remove(), 700);
+    }, 1400);
   }
 }
 
