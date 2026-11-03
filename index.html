@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajkumar Ramteke — Software Engineer (AI/Backend)</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta
+      name="description"
+      content="Software Engineer. FastAPI, RAG, Salesforce integrations, production systems. Bangalore."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/portfolio/assets/index-UqXuvWdy.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DCK_A0Ks.css">
+  </head>
+  <body>
+    <canvas id="webgl"></canvas>
+    <div class="vignette"></div>
+
+    <div id="boot" aria-hidden="true">
+      <pre id="boot-log"></pre>
+    </div>
+
+    <header class="nav">
+      <a class="logo" href="#top">RR<span>/09</span></a>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-cta ghost" type="button" data-resume-preview>Preview</button>
+        <a class="nav-cta" href="Rajkumar_Ramteke_Software_Engineer.pdf" download>Download</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="kicker">Bangalore · Software Engineer (AI/Backend) · Production</p>
+        <h1>
+          Rajkumar<br />
+          <em>Ramteke</em>
+        </h1>
+        <p class="lede">
+          I ship the backend behind products people open — FastAPI systems,
+          retrieval that cites a source, and the Salesforce sync that went live
+          for SF Giants.
+        </p>
+        <div class="hero-row">
+          <div class="portrait-wrap">
+            <img src="portrait.jpg" alt="Rajkumar Kishor Ramteke" />
+            <span class="scan"></span>
+          </div>
+          <div class="hero-meta">
+            <div class="stat"><b>02</b><span>years shipping backend</span></div>
+            <div class="stat"><b>41</b><span>tables in a live legal SaaS</span></div>
+            <div class="stat"><b>500+</b><span>DSA problems · LeetCode Knight</span></div>
+            <div class="stat"><b>86.2%</b><span>DeepDDI graph-attention accuracy</span></div>
+            <div class="btn-row">
+              <a class="btn" href="#work">Enter the system</a>
+              <button class="btn ghost" type="button" data-resume-preview>Preview resume</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="signal">
+        <p>
+          IIIT Bhubaneswar · AIOrdinate · Cisco trainee · FastAPI · Azure OpenAI ·
+          Salesforce Apex · SF Giants production sync
+        </p>
+      </section>
+
+      <section id="work">
+        <header class="sec-head">
+          <span>01 — Transmission</span>
+          <h2>Work that actually ran.</h2>
+        </header>
+
+        <article class="card live">
+          <div class="card-top">
+            <span class="tag">SHIPPED · PROD</span>
+            <span>Jun 2026 — Oct 2026</span>
+          </div>
+          <h3>SF Giants Universal Calendar</h3>
+          <p>
+            Production booking sync between Salesforce and Tripleseat.
+            HMAC-signed webhooks, OAuth 2.0, a claim queue that blocks a second
+            POST, a 2-minute success-log dedup, and a delayed retry on HTTP 429.
+          </p>
+          <ul>
+            <li>Prospect, Waitlist, Tentative, or Definite from a 90-day window, room overlap, and a 48-hour rule</li>
+            <li>Account, contact, owner, and manager ids both ways, plus Qualtrics inbound</li>
+            <li>Duplicate contacts matched on email. Deleted events unlinked from search</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">RAG</span>
+            <span>Jun 2026 — Oct 2026</span>
+          </div>
+          <h3>Legal precedent finder</h3>
+          <p>
+            A question, a saved matter, or an uploaded brief comes back as
+            matching judgments with IRAC, ratio decidendi, obiter, arguments,
+            and a 0–100 relevance score. India, the US, the UK, and Australia.
+            Default 4 judgments from the top 20 chunks.
+          </p>
+          <ul>
+            <li>40 confidence floor. Retry under 0.30 retrieval or 0.35 grounding</li>
+            <li>5 files at 10 MB, OCR, Azure AI Search chunks and eCourts context reused</li>
+            <li>20-document cap stopped HTTP 503s. Shared Postgres pool stopped HTTP 500s</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">SAAS</span>
+            <span>Nov 2025 — Present</span>
+          </div>
+          <h3>Legal case platform &amp; client portal</h3>
+          <p>
+            FastAPI and PostgreSQL for the lawyer product: 41 tables and 140+
+            routes, JWT and role-based access. Client portal adds 60+ routes
+            for cases, documents, calendar, tasks, and Rocket.Chat. Celery,
+            Redis, Azure Blob, Docker, GitHub Actions.
+          </p>
+          <ul>
+            <li>Annotation writes PDF bookmarks, a hierarchical index, and annexure references</li>
+            <li>LODE dated events, duplicates dropped at 85% similarity</li>
+            <li>9 eCourt endpoints. Captcha solved with Azure OpenAI vision, then court-order PDFs</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">AGENT</span>
+            <span>Apr 2026 — Present</span>
+          </div>
+          <h3>LexAIO — multilingual legal chatbot</h3>
+          <p>
+            Integrated into both portals. A GPT-4o-mini router picks tools.
+            GPT-4 answers from a law dictionary, Azure AI Search, and eCourts.
+            13 chatbot routes store detected language, confidence, follow-ups,
+            and a summary that can be shared by email.
+          </p>
+        </article>
+
+        <article class="card dim">
+          <div class="card-top">
+            <span class="tag">TRAINEE</span>
+            <span>Nov 2024 — Nov 2025</span>
+          </div>
+          <h3>Cisco Systems India — Software Engineer Trainee</h3>
+          <p>
+            Internal ops dashboard APIs in FastAPI and PostgreSQL: device
+            records, configs, status. JWT on the endpoints, SQL for list/filter
+            screens, Git reviews and integration-test debugging with seniors.
+          </p>
+        </article>
+      </section>
+
+      <section id="projects">
+        <header class="sec-head">
+          <span>02 — Experiments</span>
+          <h2>Things I built to learn the edge.</h2>
+        </header>
+        <div class="grid">
+          <a class="proj" href="https://github.com/iamrajkumar1/Talk_with_CSV" target="_blank" rel="noreferrer">
+            <small>LLM · DATA</small>
+            <h3>Talk with CSV</h3>
+            <p>Prompt + Cohere over CSV files: stats, plots, questions in language — not SQL.</p>
+          </a>
+          <a class="proj" href="https://github.com/iamrajkumar1" target="_blank" rel="noreferrer">
+            <small>GNN · CHEMISTRY</small>
+            <h3>DeepDDI</h3>
+            <p>Three DrugBank models. Graph attention reached 86.2% accuracy and 0.850 AUC, from a 71.3% SMILES Conv1D baseline. RDKit graphs, 79 atom features, 10 bond features.</p>
+          </a>
+          <a class="proj" href="https://github.com/iamrajkumar1/FavFOOD" target="_blank" rel="noreferrer">
+            <small>WEB</small>
+            <h3>FavFOOD</h3>
+            <p>Recipes from ingredients. A small product brain: match, rank, show.</p>
+          </a>
+          <a class="proj" href="https://github.com/iamrajkumar1/text-magic" target="_blank" rel="noreferrer">
+            <small>REACT</small>
+            <h3>Text Magic</h3>
+            <p>React utilities for text transforms. Fast UI, no ceremony.</p>
+          </a>
+          <a class="proj" href="https://github.com/iamrajkumar1/profile-app" target="_blank" rel="noreferrer">
+            <small>REACT</small>
+            <h3>Profile app</h3>
+            <p>Early React frontend. How I learned to ship a screen.</p>
+          </a>
+          <a class="proj" href="https://github.com/iamrajkumar1/FIt-Muscle" target="_blank" rel="noreferrer">
+            <small>WEB</small>
+            <h3>Fit-Muscle</h3>
+            <p>Fitness product sketch on GitHub. Always building.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="stack">
+        <header class="sec-head">
+          <span>03 — Instruments</span>
+          <h2>Stack I actually touch.</h2>
+        </header>
+        <div class="chips">
+          <b>Python</b><b>FastAPI</b><b>RAG</b><b>Azure OpenAI</b><b>GPT-4</b>
+          <b>Tool calling</b><b>Azure AI Search</b><b>Document Intelligence</b>
+          <b>PostgreSQL</b><b>MongoDB</b><b>Redis</b><b>Celery</b><b>SQLAlchemy</b>
+          <b>Docker</b><b>GitHub Actions</b><b>JWT</b><b>OAuth</b><b>Webhooks</b>
+          <b>Apex</b><b>eCourts</b><b>C++</b><b>JavaScript</b>
+        </div>
+        <p class="edu">
+          B.Tech Computer Engineering, IIIT Bhubaneswar · 2020–2024 · CGPA 7.44/10
+          · CCNA · Coursera Supervised ML ·
+          <a href="https://leetcode.com/u/iamrajkumar/" target="_blank" rel="noreferrer">LeetCode</a>
+        </p>
+      </section>
+
+      <section id="contact">
+        <header class="sec-head">
+          <span>04 — Handshake</span>
+          <h2>If you build serious systems, talk to me.</h2>
+        </header>
+        <div class="contact-grid">
+          <a href="mailto:rajkrram09@gmail.com">rajkrram09@gmail.com</a>
+          <a href="tel:+918007248969">+91 80072 48969</a>
+          <a href="https://www.linkedin.com/in/iamrajkumar" target="_blank" rel="noreferrer">linkedin.com/in/iamrajkumar</a>
+          <a href="https://github.com/iamrajkumar1" target="_blank" rel="noreferrer">github.com/iamrajkumar1</a>
+          <div class="btn-row">
+            <button class="btn ghost" type="button" data-resume-preview>Preview resume</button>
+            <a class="btn" href="Rajkumar_Ramteke_Software_Engineer.pdf" download>Download resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="resume-modal" class="modal" hidden>
+      <div class="modal-panel">
+        <div class="modal-bar">
+          <span>Resume preview</span>
+          <div>
+            <a class="nav-cta" href="Rajkumar_Ramteke_Software_Engineer.pdf" download>Download</a>
+            <button class="nav-cta ghost" type="button" id="close-resume">Close</button>
+          </div>
+        </div>
+        <iframe title="Rajkumar resume" src="Rajkumar_Ramteke_Software_Engineer.pdf"></iframe>
+      </div>
+    </div>
+
+    <footer>
+      <span>© 2026 Rajkumar Kishor Ramteke</span>
+      <span>iamrajkumar1.github.io/portfolio</span>
+    </footer>
+
+  </body>
+</html>
