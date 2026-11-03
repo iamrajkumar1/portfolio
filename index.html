@@ -95,7 +95,7 @@
             Lead on the production sync of Qualtrics, Salesforce, and Tripleseat.
             Booking updates had been typed by hand. A prior vendor had not made
             the sync work. The automated path cut that handling time by about
-            90–95%. About an INR 4 crore engagement. HMAC-signed webhooks,
+            90–95%. Roughly a $450–500K engagement. HMAC-signed webhooks,
             OAuth 2.0, a claim queue, a 2-minute success-log dedup, and a
             delayed retry on HTTP 429.
           </p>
@@ -108,35 +108,14 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="tag">RAG</span>
-            <span>Jun 2026 — Oct 2026</span>
-          </div>
-          <h3>Legal precedent finder</h3>
-          <p>
-            A question, a saved matter, or an uploaded brief comes back as
-            matching judgments with IRAC, ratio decidendi, obiter, arguments,
-            and a 0–100 relevance score. India, the US, the UK, and Australia.
-            Default 4 judgments from the top 20 chunks. Sold as a Microsoft
-            SaaS offer, with plan quotas and Razorpay checkout.
-          </p>
-          <ul>
-            <li>40 confidence floor. Retry under 0.30 retrieval or 0.35 grounding</li>
-            <li>5 files at 10 MB, OCR, Azure AI Search chunks and eCourts context reused</li>
-            <li>20-document cap stopped HTTP 503s. Shared Postgres pool stopped HTTP 500s</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="tag">SAAS</span>
+            <span class="tag">CASEFLOW</span>
             <span>Nov 2025 — Present</span>
           </div>
-          <h3>Legal case platform &amp; client portal</h3>
+          <h3>Caseflow – legal platform</h3>
           <p>
             FastAPI and PostgreSQL for the lawyer product: 41 tables and 140+
             routes, JWT and role-based access, MongoDB for chat and search state.
-            Client portal adds 60+ routes for cases, documents, calendar, tasks,
-            and Rocket.Chat. 9 eCourt endpoints; captcha solved with Azure OpenAI vision.
+            9 eCourt endpoints; captcha solved with Azure OpenAI vision.
           </p>
           <ul>
             <li>Annotation moved from about 75% to about 98% with Document Intelligence, OCR, and Azure OpenAI</li>
@@ -147,15 +126,48 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="tag">AGENT</span>
+            <span class="tag">CASEFLOW · RAG</span>
+            <span>Jun 2026 — Oct 2026</span>
+          </div>
+          <h3>Precedent finder</h3>
+          <p>
+            Part of Caseflow. A question, a saved matter, or an uploaded brief
+            comes back as matching judgments with IRAC, ratio decidendi, obiter,
+            arguments, and a 0–100 relevance score. India, the US, the UK, and
+            Australia. Default 4 judgments from the top 20 chunks. Listed on the
+            Microsoft marketplace as a subscription, with plan quotas and Razorpay.
+          </p>
+          <ul>
+            <li>40 confidence floor. Retry under 0.30 retrieval or 0.35 grounding</li>
+            <li>5 files at 10 MB, OCR, Azure AI Search chunks and eCourts context reused</li>
+            <li>20-document cap stopped HTTP 503s. Shared Postgres pool stopped HTTP 500s</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">CLIENT PORTAL</span>
+            <span>Nov 2025 — Present</span>
+          </div>
+          <h3>Client portal</h3>
+          <p>
+            Client-facing FastAPI service. 60+ JWT routes for signup and password
+            reset, pinned cases, document folders, task comments, calendar, and
+            Rocket.Chat.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">CLIENT PORTAL · AGENT</span>
             <span>Apr 2026 — Present</span>
           </div>
-          <h3>LexAIO — multilingual legal chatbot</h3>
+          <h3>Multilingual Chatbot</h3>
           <p>
-            Integrated into both portals. A GPT-4o-mini router picks tools.
-            GPT-4 answers from a law dictionary, Azure AI Search, and eCourts.
-            13 chatbot routes store detected language, confidence, follow-ups,
-            and a summary that can be shared by email.
+            For the client portal. Tool-calling agent in its own service.
+            GPT-4o-mini routes the last 5 turns to hybrid search, eCourts, or
+            MasterDB. GPT-4 answers only from the tool payload. The frontend
+            calls the portal backend, which calls the agent. 13 chatbot routes.
           </p>
         </article>
 
