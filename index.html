@@ -90,9 +90,12 @@
           </div>
           <h3>SF Giants Universal Calendar</h3>
           <p>
-            Production booking sync between Salesforce and Tripleseat.
-            HMAC-signed webhooks, OAuth 2.0, a claim queue that blocks a second
-            POST, a 2-minute success-log dedup, and a delayed retry on HTTP 429.
+            Lead on the production sync of Qualtrics, Salesforce, and Tripleseat.
+            Booking updates had been typed by hand. A prior vendor had not made
+            the sync work. The automated path cut that handling time by about
+            90–95%. About an INR 4 crore engagement. HMAC-signed webhooks,
+            OAuth 2.0, a claim queue, a 2-minute success-log dedup, and a
+            delayed retry on HTTP 429.
           </p>
           <ul>
             <li>Prospect, Waitlist, Tentative, or Definite from a 90-day window, room overlap, and a 48-hour rule</li>
@@ -111,7 +114,8 @@
             A question, a saved matter, or an uploaded brief comes back as
             matching judgments with IRAC, ratio decidendi, obiter, arguments,
             and a 0–100 relevance score. India, the US, the UK, and Australia.
-            Default 4 judgments from the top 20 chunks.
+            Default 4 judgments from the top 20 chunks. Sold as a Microsoft
+            SaaS offer, with plan quotas and Razorpay checkout.
           </p>
           <ul>
             <li>40 confidence floor. Retry under 0.30 retrieval or 0.35 grounding</li>
@@ -128,14 +132,14 @@
           <h3>Legal case platform &amp; client portal</h3>
           <p>
             FastAPI and PostgreSQL for the lawyer product: 41 tables and 140+
-            routes, JWT and role-based access. Client portal adds 60+ routes
-            for cases, documents, calendar, tasks, and Rocket.Chat. Celery,
-            Redis, Azure Blob, Docker, GitHub Actions.
+            routes, JWT and role-based access, MongoDB for chat and search state.
+            Client portal adds 60+ routes for cases, documents, calendar, tasks,
+            and Rocket.Chat. 9 eCourt endpoints; captcha solved with Azure OpenAI vision.
           </p>
           <ul>
-            <li>Annotation writes PDF bookmarks, a hierarchical index, and annexure references</li>
-            <li>LODE dated events, duplicates dropped at 85% similarity</li>
-            <li>9 eCourt endpoints. Captcha solved with Azure OpenAI vision, then court-order PDFs</li>
+            <li>Annotation moved from about 75% to about 98% with Document Intelligence, OCR, and Azure OpenAI</li>
+            <li>Handwritten page numbers are dropped. The annotation is placed on the page where the heading is found</li>
+            <li>LODE at about 96% with petitioner, respondent, and neutral context. Duplicates still drop at 85%</li>
           </ul>
         </article>
 
